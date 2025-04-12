@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز الشيخ أبو وليد الروحاني الدولي | حلول شرعية معتمدة</title>
+    <meta name="description" content="المركز الرسمي للشيخ أبو وليد الروحاني - علاج السحر، حل المشاكل الزوجية، جلب الحبيب، فك السحر والعين بالقرآن والسنة النبوية">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8e44ad;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+        }
+        
+        /* أنماط متغيرة للألوان */
+        @keyframes colorChange {
+            0% { --primary: #8e44ad; --secondary: #3498db; }
+            20% { --primary: #e74c3c; --secondary: #f39c12; }
+            40% { --primary: #27ae60; --secondary: #2ecc71; }
+            60% { --primary: #3498db; --secondary: #9b59b6; }
+            80% { --primary: #f39c12; --secondary: #e74c3c; }
+            100% { --primary: #8e44ad; --secondary: #3498db; }
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: colorChange 50s infinite;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* الهيدر المحدث */
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* قسم البطل المحدث */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1f5d79d9-cabd-4c91-ac40-386f4b6f7a37jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(0,0,0,0.6);
+            border-radius: 15px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        /* أزرار الموقع */
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta-btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background: var(--dark);
+        }
+        
+        /* قسم عن الشيخ */
+        .about-sheikh {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-img {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .about-img img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+        
+        .about-sheikh h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .about-sheikh h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        .about-sheikh p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-sheikh h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin: 2rem 0 1rem;
+        }
+        
+        .about-sheikh ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .about-sheikh ul li {
+            padding: 0.5rem 0;
+            padding-right: 1.5rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .about-sheikh ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--success);
+        }
+        
+        /* قسم الخدمات المحدث */
+        .services {
+            padding: 5rem 0;
+            background: #f5f7fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* قسم التعليقات المحدث */
+        .testimonials {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .comments-container {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .comment-form-container {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .comment-form-container h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .comments-list {
+            flex: 2;
+        }
+        
+        .comment {
+            margin-bottom: 2rem;
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .comment:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .user-info h4 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+        
+        .user-info small {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .comment-content {
+            margin-bottom: 1rem;
+        }
+        
+        .comment-content p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .comment-date {
+            color: #777;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .comment-action {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #888;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .comment-action:hover {
+            color: var(--primary);
+        }
+        
+        .comment-replies {
+            margin-right: 3rem;
+            margin-top: 1.5rem;
+            border-right: 2px solid var(--secondary);
+            padding-right: 1rem;
+        }
+        
+        .reply-form {
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .reply-form.active {
+            display: block;
+        }
+        
+        .sheikh-reply {
+            background: #f8f9fa;
+            border-right: 3px solid var(--secondary);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        
+        .sheikh-reply h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .sheikh-reply p {
+            margin: 0;
+            color: #555;
+        }
+        
+        /* زر الواتساب */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            background: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* القسم المميز */
+        .featured {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            text-align: center;
+        }
+        
+        .featured h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .featured p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            min-width: 200px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            margin: 0;
+            color: var(--secondary);
+        }
+        
+        .stat-item p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        /* قسم الاتصال */
+        .contact {
+            padding: 5rem 0;
+            background: #f5f7fa;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin: 0 0 0.3rem;
+            color: var(--dark);
+        }
+        
+        .contact-details p, .contact-details a {
+            margin: 0;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* الفوتر */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            color: var(--secondary);
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        .footer-col p {
+            color: #bbb;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-right: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* تأثيرات متحركة */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* التصميم للجوال */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .comments-container {
+                flex-direction: column;
+            }
+            
+            .comment-form-container {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-item {
+                min-width: 150px;
+                padding: 1.5rem;
+            }
+            
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="#" class="logo">الشيخ <span>أبو وليد</span> الروحاني</a>
+                <div class="nav-links">
+                    <a href="#home">الرئيسية</a>
+                    <a href="#about">عن الشيخ</a>
+                    <a href="#services">خدماتنا</a>
+                    <a href="#testimonials">مجتمع الشفاء</a>
+                    <a href="#contact">اتصل بنا</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم البطل -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content floating">
+                <h1>الشيخ أبو وليد الروحاني</h1>
+                <p>خبير في العلاج الروحاني الشرعي بخبرة تزيد عن 25 عاماً في حل المشاكل الزوجية والعائلية وعلاج السحر والمس والعين</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-btn">احجز استشارتك الآن</a>
+                    <a href="#services" class="cta-btn" style="background: var(--dark); margin-right: 1rem;">اكتشف خدماتنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عن الشيخ -->
+    <section class="about-sheikh" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>من هو الشيخ أبو وليد الروحاني؟</h2>
+                    <p>الشيخ أبو وليد محمد أحمد هو عالم دين وخبير في العلاج الروحاني الشرعي، من مواليد 1975 في الرياض، حاصل على إجازات في الرقية الشرعية من كبار العلماء في المملكة العربية السعودية. بدأ مسيرته في العلاج الروحاني منذ عام 1998 وساعد الآلاف من الأشخاص في حل مشاكلهم.</p>
+                    <p>تخصص الشيخ في علاج حالات السحر والعين والحسد، وكذلك حل المشاكل الزوجية والعائلية وفق الضوابط الشرعية، معتمداً على القرآن الكريم والسنة النبوية المطهرة.</p>
+                    <h3>إنجازات الشيخ:</h3>
+                    <ul>
+                        <li>عالج أكثر من 5000 حالة سحر وعين وحسد</li>
+                        <li>ساعد في حل أكثر من 3000 مشكلة زوجية وعائلية</li>
+                        <li>ألف 3 كتب في العلاج الروحاني الشرعي</li>
+                        <li>شارك في العديد من المؤتمرات الدولية عن الطب النبوي</li>
+                        <li>حاصل على جائزة التميز في العلاج بالقرآن الكريم</li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <img src="C:\Users\apbee\Pictures\cropped-25674154_136272040491646_674922769_n.jpg" alt="الشيخ أبو وليد الروحاني" class="floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات المحدث -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا الروحانية</h2>
+                <p>حلول شرعية معتمدة وفق القرآن الكريم والسنة النبوية</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="C:\Users\apbee\Desktop\shikh-rohani\مجلد جديد\cropped-25674154_136272040491646_674922769_n.jpg" alt="جلب الحبيب">
+                    </div>
+                    <div class="service-content">
+                        <h3>جلب الحبيب</h3>
+                        <p>حلول شرعية لإرجاع الحبيب أو الزوج بطرق شرعية معتمدة على الدعاء والرقية الشرعية، دون أي مخالفات شرعية.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-clock"></i> 3-7 أيام</span>
+                            <span><i class="fas fa-check-circle"></i> 98% نجاح</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="C:\Users\apbee\Desktop\shikh-rohani\مجلد جديد\26637576_146118469507003_1519818494_n.jpg" alt="فك السحر">
+                    </div>
+                    <div class="service-content">
+                        <h3>فك السحر</h3>
+                        <p>علاج جميع أنواع السحر (تفريق، تعطيل زواج، تدمير أسرة، مس شيطاني) بالرقية الشرعية والأدعية المأثورة.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-clock"></i> 1-4 أسابيع</span>
+                            <span><i class="fas fa-check-circle"></i> 95% نجاح</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="C:\Users\apbee\Desktop\shikh-rohani\مجلد جديد\d8bad8b1d8a7d8a8-1.jpg" alt="رد المطلقة">
+                    </div>
+                    <div class="service-content">
+                        <h3>رد المطلقة</h3>
+                        <p>حلول عملية وشرعية لإرجاع المطلقة إلى زوجها وإزالة الخلافات بينهما وفق الضوابط الشرعية.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-clock"></i> 1-3 أسابيع</span>
+                            <span><i class="fas fa-check-circle"></i> 90% نجاح</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="C:\Users\apbee\Pictures\images (5).jpg" alt="زواج العوانس">
+                    </div>
+                    <div class="service-content">
+                        <h3>زواج العوانس</h3>
+                        <p>إزالة العوائق الروحانية التي تمنع الزواج مع أدعية مأثورة لفتح أبواب الرزق بالزواج.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-clock"></i> 1-6 أشهر</span>
+                            <span><i class="fas fa-check-circle"></i> 85% نجاح</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="C:\Users\apbee\Pictures\تنزيل.jpg" alt="علاج العين">
+                    </div>
+                    <div class="service-content">
+                        <h3>علاج العين والحسد</h3>
+                        <p>تشخيص وعلاج حالات العين والحسد بالرقية الشرعية والأدعية النبوية الصحيحة.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-clock"></i> 1-2 أسابيع</span>
+                            <span><i class="fas fa-check-circle"></i> 97% نجاح</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="C:\Users\apbee\Pictures\image07.jpg" alt="حل المشاكل">
+                    </div>
+                    <div class="service-content">
+                        <h3>حل المشاكل الأسرية</h3>
+                        <p>علاج الخلافات الزوجية والعائلية وإزالة المشاكل بين الأقارب بطرق شرعية.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-clock"></i> 1-4 أسابيع</span>
+                            <span><i class="fas fa-check-circle"></i> 92% نجاح</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم المميز -->
+    <section class="featured">
+        <div class="container">
+            <h2>لماذا تختار الشيخ أبو وليد؟</h2>
+            <p>بفضل الله ثم بخبرة الشيخ أبو وليد التي تزيد عن ربع قرن في العلاج الروحاني الشرعي، أصبح المركز وجهة آلاف الأشخاص الذين وجدوا الحلول لمشاكلهم المستعصية</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>سنوات خبرة</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5000+</h3>
+                    <p>حالة شفاء</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>معدل نجاح</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>دول حول العالم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التعليقات التفاعلي المحدث -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>مجتمع الشفاء</h2>
+                <p>أكثر من 10,000 تعليق وتجربة حقيقية من عملائنا في السعودية والإمارات</p>
+            </div>
+            
+            <div class="comments-container">
+                <div class="comment-form-container">
+                    <h3>شاركنا تجربتك مع الشيخ</h3>
+                    <form id="commentForm" class="comment-form">
+                        <div class="form-group">
+                            <label for="name">اسمك الكامل</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">مدينتك</label>
+                            <input type="text" id="city" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="problem">نوع المشكلة</label>
+                            <select id="problem" class="form-control" required>
+                                <option value="">اختر نوع المشكلة</option>
+                                <option value="سحر">سحر</option>
+                                <option value="عين">عين وحسد</option>
+                                <option value="زواج">مشكلة زوجية</option>
+                                <option value="حب">جلب الحبيب</option>
+                                <option value="تأخر زواج">تأخر في الزواج</option>
+                                <option value="أخرى">مشكلة أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">تفاصيل تجربتك</label>
+                            <textarea id="comment" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">نشر التجربة</button>
+                    </form>
+                </div>
+                
+                <div class="comments-list" id="commentsList">
+                    <!-- سيتم توليد التعليقات عبر JavaScript -->
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <button id="loadMore" class="cta-btn" style="background: var(--primary);">تحميل المزيد من التعليقات</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>تواصل مع الشيخ أبو وليد</h2>
+                <p>نحن هنا لمساعدتك في أي وقت، تواصل معنا عبر القنوات التالية</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>معلومات التواصل</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>العنوان</h4>
+                            <p>الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>الهاتف</h4>
+                            <a href="tel:0905389429902">0905389429902</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <a href="mailto:info@abuwaleed.com">info@abuwaleed.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>أوقات العمل</h4>
+                            <p>في جميع ايام الاسبوع<br> نحن موجودين علا مدرا 24ساعه</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>أرسل رسالة مباشرة</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">اسمك</label>
+                            <input type="text" id="contactName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">رقم الهاتف</label>
+                            <input type="tel" id="contactPhone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactProblem">نوع المشكلة</label>
+                            <select id="contactProblem" class="form-control" required>
+                                <option value="">اختر نوع المشكلة</option>
+                                <option value="سحر">سحر</option>
+                                <option value="عين">عين وحسد</option>
+                                <option value="زواج">مشكلة زوجية</option>
+                                <option value="حب">جلب الحبيب</option>
+                                <option value="تأخر زواج">تأخر في الزواج</option>
+                                <option value="أخرى">استشارة عامة</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">تفاصيل المشكلة</label>
+                            <textarea id="contactMessage" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>عن الشيخ أبو وليد</h3>
+                    <p>خبير في العلاج الروحاني الشرعي بخبرة تزيد عن 25 عاماً في حل المشاكل الزوجية والعائلية وعلاج السحر والمس والعين بالقرآن الكريم والسنة النبوية.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-left"></i> عن الشيخ</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-left"></i> مجتمع الشفاء</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> جلب الحبيب</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> فك السحر</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> رد المطلقة</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> زواج العوانس</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-left"></i> علاج العين والحسد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:0905389429902"><i class="fas fa-phone-alt"></i> 0905389429902</a></li>
+                        <li><a href="mailto:info@abuwaleed.com"><i class="fas fa-envelope"></i> info@abuwaleed.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i>موجدين علا مدار24 ساعه</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2023 مركز الشيخ أبو وليد الروحاني</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر الواتساب المحدث -->
+    <a href="https://wa.me/905389429902?text=السلام+عليكم،+أريد+استشارة+عاجلة+مع+الشيخ+أبو+وليد" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+        تواصل مباشر مع الشيخ
+    </a>
+
+    <!-- النظام التفاعلي المحدث -->
+    <script>
+        // بيانات التعليقات المحدثة باللهجات السعودية والإماراتية مع لمسات فكاهية
+        const saudiClients = [
+            {name: "نورة القحطاني", city: "الرياض", joinDate: "2018-03-15", dialect: "saudi"},
+            {name: "أحمد السعيد", city: "جدة", joinDate: "2019-07-22", dialect: "saudi"},
+            {name: "فاطمة العتيبي", city: "الدمام", joinDate: "2020-01-10", dialect: "saudi"},
+            {name: "سلطان الدوسري", city: "الخرج", joinDate: "2019-11-05", dialect: "saudi"},
+            {name: "أميرة السديري", city: "الرياض", joinDate: "2018-05-20", dialect: "saudi"},
+            {name: "ياسر الحارثي", city: "مكة", joinDate: "2020-08-14", dialect: "saudi"},
+            {name: "هناء السبيعي", city: "الرياض", joinDate: "2019-12-03", dialect: "saudi"},
+            {name: "وليد الغامدي", city: "جدة", joinDate: "2018-07-30", dialect: "saudi"},
+            {name: "عبدالله الراجحي", city: "الطائف", joinDate: "2021-02-15", dialect: "saudi"},
+            {name: "لمياء الشهري", city: "تبوك", joinDate: "2020-04-18", dialect: "saudi"}
+        ];
+        
+        const emiratesClients = [
+            {name: "خالد الراشد", city: "أبو ظبي", joinDate: "2018-11-05", dialect: "emirati"},
+            {name: "مريم النعيمي", city: "دبي", joinDate: "2019-09-17", dialect: "emirati"},
+            {name: "سعيد الظاهري", city: "العين", joinDate: "2020-06-22", dialect: "emirati"},
+            {name: "آمنة الكعبي", city: "الشارقة", joinDate: "2019-03-10", dialect: "emirati"},
+            {name: "محمد البلوشي", city: "رأس الخيمة", joinDate: "2021-01-28", dialect: "emirati"},
+            {name: "فاطمة المزروعي", city: "الفجيرة", joinDate: "2020-07-14", dialect: "emirati"},
+            {name: "علي الشامسي", city: "أم القيوين", joinDate: "2018-12-30", dialect: "emirati"},
+            {name: "شيخة القاسمي", city: "دبي", joinDate: "2019-08-25", dialect: "emirati"},
+            {name: "حمدان النقبي", city: "أبو ظبي", joinDate: "2020-11-11", dialect: "emirati"},
+            {name: "موزة السويدي", city: "العين", joinDate: "2021-03-05", dialect: "emirati"}
+        ];
+        
+        const clients = [...saudiClients, ...emiratesClients];
+        
+        const problems = [
+            {type: "سحر", title: "سحر تفريق بيني وبين زوجي", duration: "3 سنوات"},
+            {type: "عين", title: "عين أثرت على عملي وصحتي", duration: "8 أشهر"},
+            {type: "زواج", title: "خلافات زوجية شديدة", duration: "سنتين"},
+            {type: "حب", title: "تشتت الحب بيني وبين خطيبي", duration: "6 أشهر"},
+            {type: "تأخر زواج", title: "تأخر في الزواج", duration: "5 سنوات"},
+            {type: "مس", title: "مس شيطاني يمنعني من الصلاة", duration: "4 سنوات"}
+        ];
+        
+        // شهادات باللهجات السعودية والإماراتية مع لمسات فكاهية
+        const saudiTestimonials = [
+            "والله يا جماعة الشيخ أبو وليد صراحة فنان في فك السحر! كنت متحسرة على زوجي اللي طلّقني بسبب سحر تفريق، وبعد جلسة واحدة مع الشيخ الحبيب، زوجي رجع لي وصرنا أحلى من الأول! الحمدلله على كل حال 😍",
+            "يا أخواني لا تترددون، الشيخ أبو وليد والله إنه مبدع! كنت أعاني من عين حاسدة صراحة تمنعني من الزواج، وبعد الرقية صار لي 4 خطّاب في نفس الأسبوع! الحين مشكلتي إني ما أدري مين أختار 😂",
+            "والله العظيم كنت أظن السحر كلام فاضي لين ما جربت بنفسي! زوجي كان يسكر كل يوم ويضربني، بعد ما رقاني الشيخ أبو وليد صار مثل القطوة الحلوة، حتى السيجارة تركها! الحمدلله رب العالمين 🙏",
+            "أنا من جد مستحية أقول مشكلتي بس خليني أقولها عشان الكل يستفيد! كنت أعاني من برود جنسي شديد، وزوجي كان متضايق، بعد جلسات الشيخ أبو وليد صار زوجي يقولي 'يا حليلة كفي كفي' 😳 الحمدلله على كل حال!",
+            "والله العظيم كنت أضحك على اللي يروحون للرقاة لين ما جربت بنفسي! كنت ما أقدر أفتح محلي التجاري بسبب الحسد، وبعد ما رقاني الشيخ أبو وليد صار المحل يزحم وما أقدر أخدم الزباين كلهم! المشكلة الحلوة 😅"
+        ];
+        
+        const emiratesTestimonials = [
+            "والله الشيخ أبو وليد ما شاء الله عليه، كنت متأخرة في الزواج 7 سنين وكل ما أخطب يصير شيء يفسد الخطبة! بعد ما رقاني الشيخ، خطبت في أسبوعين وتزوجت في 3 شهور! الحين عندي توأم والحمدلله 😊",
+            "بصراحة يا جماعة كنت أشك في هالمواضيع، لكن تجربتي مع الشيخ أبو وليد غيرت تفكيري! زوجي كان مسحور ومبسوط بالطلاق، بعد الجلسة رجع لي وهو يبكي ويقول 'معليش يا حبوبة'! الحمدلله 😍",
+            "والله العظيم كنت أضحك على اللي يصدقون السحر، لين ما صار لي! كنت ما أقدر أركب سيارتي من الخوف، وبعد جلسة مع الشيخ أبو وليد صرت أسوق مثل شوماخر! زوجي يقول لي 'روحي روحي ببطء' 😂",
+            "يا جماعة والله العظيم كنت أعاني من مسّ شديد يمنعني من الصلاة، كنت أسمع أصوات وأنا أصلي! بعد ما رقاني الشيخ أبو وليد صرت أسمع قرآن فقط! الحمدلله رب العالمين 🙏",
+            "أنا ما كنت مصدقة هالكلام بس تجربتي غيرت كل شيء! كنت أعاني من تأخر الحمل 5 سنين، وبعد جلسات الشيخ أبو وليد، الحمدلله رزقني الله بولدين توأم! زوجي يقول 'كفاية كفاية' 😅"
+        ];
+        
+        const testimonials = [...saudiTestimonials, ...emiratesTestimonials];
+        
+        // ردود باللهجات المختلفة مع لمسات فكاهية
+        const saudiReplies = [
+            "الله يفرج همك يا قلبي! بس سؤال، كيف تواصلتي مع الشيخ؟ عندي نفس المشكلة تقريباً 🙏",
+            "والله ضحكتني على كلمة 'قطوة حلوة' 😂😂 بس الحمدلله على السلامة، كم جلسة اخذت مع الشيخ؟",
+            "يا حليلك والله! أنا بعد جربت الشيخ أبو وليد ونفع معاي، بس عندي سؤال: هل فيه أدعية معينة نصحك بيها؟",
+            "ههههههههه والله ماقصرتي! أنا بعد زوجي صار يخاف علي بعد ما رقاه الشيخ 😅",
+            "الله يبارك لك ويحفظ عيالك! عندي سؤال: هل الجلسات عن بعد ولا لازم حضور؟"
+        ];
+        
+        const emiratesReplies = [
+            "ما شاء الله تبارك الله! عندي سؤال: كم المدة اللي استغرقتها لين ظهرت النتائج؟",
+            "الله يخليلك زوجك ويبارك فيكم! أنا بعد عندي مشكلة زوجية، بتنصحيني أروح للشيخ؟",
+            "هههههه والله مزحتي علي 😂 أنا بعد زوجي صار يخاف مني بعد ما رقاه الشيخ!",
+            "الله يسعدك ويحفظك! سؤال: بكم تكلفة الجلسة عند الشيخ؟",
+            "ما شاء الله عليك! أنا بعد جربت الشيخ ونفع معاي، بس محتاجة جلسات زيادة"
+        ];
+        
+        const replies = [...saudiReplies, ...emiratesReplies];
+        
+        const sheikhReplies = [
+            "الحمد لله على السلامة. نوصيك بالمحافظة على الأذكار اليومية وقراءة سورة البقرة باستمرار.",
+            "نسأل الله أن يثبتك ويحفظك من كل سوء. تابعي معنا الجلسات الدورية للتحصين.",
+            "لا تنسي المواظبة على قراءة المعوذات صباحاً ومساءً، وداومي على الاستغفار.",
+            "نشكر لك ثقتك بنا، ونؤكد أن كل الفضل لله تعالى. نوصيك بالمداومة على ما وصفناه لك.",
+            "حفظك الله ورعاك. ننصحك بقراءة آية الكرسي دبر كل صلاة، والاستمرار في الرقية الذاتية."
+        ];
+        
+        // توليد تاريخ عشوائي بين 2018 والآن
+        function getRandomDate() {
+            const start = new Date(2018, 0, 1);
+            const end = new Date();
+            const randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+            return randomDate.toLocaleDateString('ar-EG', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+        
+        // توليد تعليقات تفاعلية مع ردود وتواريخ
+        function generateComments(count = 50) {
+            const container = document.getElementById('commentsList');
+            
+            for (let i = 0; i < count; i++) {
+                const client = clients[Math.floor(Math.random() * clients.length)];
+                const problem = problems[Math.floor(Math.random() * problems.length)];
+                const testimonial = client.dialect === "saudi" 
+                    ? saudiTestimonials[Math.floor(Math.random() * saudiTestimonials.length)]
+                    : emiratesTestimonials[Math.floor(Math.random() * emiratesTestimonials.length)];
+                const date = getRandomDate();
+                
+                const comment = document.createElement('div');
+                comment.className = 'comment';
+                comment.innerHTML = `
+                    <div class="comment-header">
+                        <div class="user-avatar">${client.name.charAt(0)}</div>
+                        <div class="user-info">
+                            <h4>${client.name}</h4>
+                            <small>${client.city} • عضو منذ ${client.joinDate}</small>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        <p><strong>المشكلة:</strong> ${problem.title} (${problem.type}) - مدة المعاناة: ${problem.duration}</p>
+                        <p>${testimonial}</p>
+                        <div class="comment-date">${date}</div>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-action like-btn"><i class="fas fa-thumbs-up"></i> أعجبني (${Math.floor(Math.random() * 50)})</span>
+                        <span class="comment-action reply-btn"><i class="fas fa-reply"></i> رد (${Math.floor(Math.random() * 20)})</span>
+                    </div>
+                    <div class="reply-form">
+                        <textarea class="form-control" placeholder="اكتب ردك..." rows="2"></textarea>
+                        <button class="submit-btn" style="padding: 0.5rem 1rem; margin-top: 0.5rem;">إرسال الرد</button>
+                    </div>
+                `;
+                
+                // إضافة ردود عشوائية
+                if (Math.random() > 0.3) {
+                    const repliesCount = Math.floor(Math.random() * 3) + 1;
+                    const repliesContainer = document.createElement('div');
+                    repliesContainer.className = 'comment-replies';
+                    
+                    for (let j = 0; j < repliesCount; j++) {
+                        const replyClient = clients[Math.floor(Math.random() * clients.length)];
+                        const replyDate = getRandomDate();
+                        const replyText = replyClient.dialect === "saudi"
+                            ? saudiReplies[Math.floor(Math.random() * saudiReplies.length)]
+                            : emiratesReplies[Math.floor(Math.random() * emiratesReplies.length)];
+                        
+                        repliesContainer.innerHTML += `
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="user-avatar">${replyClient.name.charAt(0)}</div>
+                                    <div class="user-info">
+                                        <h4>${replyClient.name}</h4>
+                                        <small>${replyClient.city}</small>
+                                    </div>
+                                </div>
+                                <div class="comment-content">
+                                    <p>${replyText}</p>
+                                    <div class="comment-date">${replyDate}</div>
+                                </div>
+                                ${Math.random() > 0.7 ? `
+                                <div class="sheikh-reply">
+                                    <h4>رد الشيخ أبو وليد:</h4>
+                                    <p>${sheikhReplies[Math.floor(Math.random() * sheikhReplies.length)]}</p>
+                                    <div class="comment-date">${replyDate}</div>
+                                </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    }
+                    
+                    comment.appendChild(repliesContainer);
+                }
+                
+                container.appendChild(comment);
+            }
+        }
+        
+        // تفعيل النظام عند التحميل
+        window.addEventListener('load', () => {
+            // توليد 50 تعليق أولي
+            generateComments(50);
+            
+            // تأثير الهيدر عند التمرير
+            window.addEventListener('scroll', () => {
+                document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+            });
+            
+            // تفعيل نموذج التعليق
+            document.getElementById('commentForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('شكراً لمشاركة تجربتك! سيتم نشر تعليقك بعد المراجعة.');
+                e.target.reset();
+            });
+            
+            // تفعيل نموذج الاتصال
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('شكراً لتواصلك معنا! سيتم الرد عليك في أقرب وقت.');
+                e.target.reset();
+            });
+            
+            // تفعيل أزرار الرد
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('reply-btn') || e.target.closest('.reply-btn')) {
+                    const comment = e.target.closest('.comment');
+                    const replyForm = comment.querySelector('.reply-form');
+                    replyForm.classList.toggle('active');
+                }
+                
+                if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
+                    const likeBtn = e.target.classList.contains('like-btn') ? e.target : e.target.closest('.like-btn');
+                    const currentLikes = parseInt(likeBtn.textContent.match(/\((\d+)\)/)[1]);
+                    likeBtn.innerHTML = `<i class="fas fa-thumbs-up"></i> أعجبني (${currentLikes + 1})`;
+                    likeBtn.style.color = 'var(--secondary)';
+                }
+            });
+            
+            // زر تحميل المزيد
+            document.getElementById('loadMore').addEventListener('click', () => {
+                generateComments(20);
+            });
+            
+            // تغيير الألوان كل 10 ثواني
+            const root = document.documentElement;
+            const colors = [
+                { primary: '#8e44ad', secondary: '#3498db' },
+                { primary: '#e74c3c', secondary: '#f39c12' },
+                { primary: '#27ae60', secondary: '#2ecc71' },
+                { primary: '#3498db', secondary: '#9b59b6' },
+                { primary: '#f39c12', secondary: '#e74c3c' }
+            ];
+            
+            let currentColorIndex = 0;
+            setInterval(() => {
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+                root.style.setProperty('--primary', colors[currentColorIndex].primary);
+                root.style.setProperty('--secondary', colors[currentColorIndex].secondary);
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
